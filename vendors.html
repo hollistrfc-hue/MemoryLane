@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vendors — Memory Lane Vintage Mall</title>
+  <meta name="description" content="Rent a booth at Memory Lane Vintage Mall in Stillwater, OK. Month-to-month, no commission. Apply to become a vendor today." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Announcement Banner -->
+  <div class="banner">
+    ✦ New Location Coming Soon — <a href="contact.html">Stay in the loop</a> ✦
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Memory Lane Vintage Mall — Home">
+        <img src="logo.jpg" alt="Memory Lane Vintage Mall" />
+      </a>
+      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="vendors.html">Vendors</a></li>
+        <li><a href="market.html">Outdoor Market</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <h1>Become a Vendor</h1>
+    <p>You've got great taste and great things to sell. Let's find them a home.</p>
+  </div>
+
+  <!-- SECTION 1: Become a Vendor intro -->
+  <section class="section">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <h2>A real partnership,<br>not just a rental agreement.</h2>
+          <hr class="divider" />
+          <p>
+            Memory Lane operates as a juried rent-a-booth mall — which means we're selective about who joins, and intentional about the mix. We're not just filling square footage. We're curating an experience, and that means the vendors we bring in are people who care about what they sell and take pride in how they show it.
+          </p>
+          <p>
+            The model is simple and vendor-friendly: you pay a flat monthly booth fee, keep everything you make on sales (no commission), and we handle the rest — foot traffic, the storefront, checkout, and the day-to-day of keeping the lights on. Agreements are month-to-month, so there's no long-term commitment hanging over your head.
+          </p>
+          <p>
+            We have booth sizes to fit most situations, from small display cases for jewelry and smalls to larger spaces suited for furniture and big pieces. Pricing is straightforward and we'll talk through the details when we connect. What we're really looking for is vendors who are going to keep their space fresh, rotate inventory, and contribute to the overall feeling that Memory Lane is a shop worth coming back to.
+          </p>
+          <p>
+            If that sounds like you, we'd love to talk.
+          </p>
+        </div>
+        <div>
+          <img src="holiday-display.jpg" alt="Memory Lane vendor booth display" class="section-img section-img--tall" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: How It Works -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 3rem;">
+        <h2>How It Works</h2>
+        <hr class="divider divider--center divider--blue" />
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <span class="card__icon" style="font-family:'Playfair Display',serif; font-size:2rem; color:var(--blue); font-weight:700;">01</span>
+          <h3>Use the form below</h3>
+          <p>Fill out the vendor application at the bottom of this page. Tell us who you are, what you sell, and what size booth you're thinking about. It's quick, and there's no commitment attached — just a starting point for a conversation.</p>
+        </div>
+        <div class="card">
+          <span class="card__icon" style="font-family:'Playfair Display',serif; font-size:2rem; color:var(--green); font-weight:700;">02</span>
+          <h3>We'll be in touch</h3>
+          <p>Jeremy or Beth will reach out personally — usually within a few days — to talk through what's available, answer your questions, and get a feel for whether we're a good fit for each other. We keep it personal because that's how we do things here.</p>
+        </div>
+        <div class="card">
+          <span class="card__icon" style="font-family:'Playfair Display',serif; font-size:2rem; color:var(--purple); font-weight:700;">03</span>
+          <h3>Set your start date</h3>
+          <p>Once you're in, we'll get your paperwork sorted, confirm your booth assignment, and set a move-in date that works for your schedule. You'll have time to bring in your fixtures, arrange your space, and make it feel like yours before the doors open.</p>
+        </div>
+        <div class="card">
+          <span class="card__icon" style="font-family:'Playfair Display',serif; font-size:2rem; color:var(--yellow-dark); font-weight:700;">04</span>
+          <h3>We handle the day-to-day</h3>
+          <p>Once you're set up, we take it from there. Store hours, checkout, customer questions, the card reader — all of it. You focus on keeping your booth fresh and rotating great inventory. We'll handle bringing the right people through the door.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Vendor Application Form -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 2.5rem;">
+        <h2>Vendor Application</h2>
+        <hr class="divider divider--center" />
+        <p class="lead">Tell us a little about yourself and what you sell. We'll take it from there.</p>
+      </div>
+
+      <div class="form-success">
+        Thank you — we've received your application and we'll be in touch soon. We can't wait to learn more about what you sell.
+      </div>
+
+      <div class="form-wrap">
+        <form name="vendor-application" method="POST" netlify netlify-honeypot="bot-field" action="/vendors.html?success=true">
+          <input type="hidden" name="form-name" value="vendor-application" />
+          <p style="display:none;"><label>Don't fill this out: <input name="bot-field" /></label></p>
+
+          <div class="form-group">
+            <label for="v-name">Your Name *</label>
+            <input type="text" id="v-name" name="name" required placeholder="Full name" />
+          </div>
+
+          <div class="form-group">
+            <label for="v-email">Email Address *</label>
+            <input type="email" id="v-email" name="email" required placeholder="you@example.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="v-phone">Phone Number *</label>
+            <input type="tel" id="v-phone" name="phone" required placeholder="(405) 555-0100" />
+          </div>
+
+          <div class="form-group">
+            <label for="v-what-you-sell">What type of items do you sell? *</label>
+            <textarea id="v-what-you-sell" name="what-you-sell" required placeholder="Antique furniture, vintage kitchenware, handmade jewelry — tell us what you've got…"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="v-booth-size">Booth size interest</label>
+            <select id="v-booth-size" name="booth-size">
+              <option value="">— Select one —</option>
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+              <option value="display-case">Display Case</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="v-photos">Upload 2–3 photos of your past booth or inventory</label>
+            <input type="file" id="v-photos" name="photos" accept=".jpg,.jpeg,.png" multiple />
+            <p class="form-note" style="margin-top:0.5rem; font-size:0.85rem; color:var(--text-light);">
+              Accepted formats: JPG, PNG. Up to 3 photos.<br>
+              Can't upload right now? Email your photos to <a href="mailto:memorylanevintagemall@gmail.com" style="color:var(--blue);">memorylanevintagemall@gmail.com</a>
+            </p>
+          </div>
+
+          <div class="form-group">
+            <label for="v-message">Anything else you'd like us to know?</label>
+            <textarea id="v-message" name="message" placeholder="Questions, your setup style, anything that feels relevant…" style="min-height:100px;"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary" style="width:100%; font-size:1rem; padding:1rem;">
+            Submit Application
+          </button>
+          <p class="form-note" style="text-align:center; margin-top:1rem;">
+            We typically respond within 2–3 business days. Every application is read by Jeremy or Beth personally.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__top-stripe"></div>
+    <div class="footer__grid">
+      <div class="footer__logo">
+        <img src="logo.jpg" alt="Memory Lane Vintage Mall" />
+        <p class="footer__tagline">"The things that last are always worth finding."<br>Come on in — the dogs are friendly.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="vendors.html">Become a Vendor</a></li>
+          <li><a href="market.html">Outdoor Market</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <address class="footer__address">
+          208 W 10th Ave<br>
+          Stillwater, Oklahoma<br>
+          <a href="tel:+14053387558" style="color:var(--yellow);">(405) 338-7558</a><br>
+          <br>
+          <strong style="color: var(--yellow);">Hours</strong><br>
+          Mon–Sat: 10am – 6pm<br>
+          Sunday: 12pm – 5pm
+        </address>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; 2024 Memory Lane Vintage Mall. All rights reserved.</span>
+      <span>Made with love in Stillwater, OK.</span>
+    </div>
+    <div class="footer__credit">Site by <a href="https://novabuildweb.com" target="_blank" rel="noopener">NovaBuild LLC</a></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

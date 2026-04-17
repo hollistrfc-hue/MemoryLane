@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Memory Lane Vintage Mall</title>
+  <meta name="description" content="Get in touch with Memory Lane Vintage Mall in Stillwater, OK. General inquiries, job applications, and new location updates." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Announcement Banner -->
+  <div class="banner">
+    ✦ New Location Coming Soon — Stay in the loop by dropping us a note below ✦
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Memory Lane Vintage Mall — Home">
+        <img src="logo.jpg" alt="Memory Lane Vintage Mall" />
+      </a>
+      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="vendors.html">Vendors</a></li>
+        <li><a href="market.html">Outdoor Market</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <h1>Say Hello.</h1>
+    <p>We're real people who read every message. Don't be a stranger.</p>
+  </div>
+
+  <!-- Visit Info + General Contact -->
+  <section class="section">
+    <div class="container">
+      <div class="two-col">
+
+        <!-- Visit Info -->
+        <div>
+          <h2>Come find us.</h2>
+          <hr class="divider divider--blue" />
+          <img src="porch.jpg" alt="Memory Lane Vintage Mall storefront" class="section-img section-img--short" style="margin-bottom: 2rem;" />
+
+          <div class="market-info-item" style="margin-bottom: 1rem;">
+            <strong>Location</strong>
+            <span>208 W 10th Ave<br>Stillwater, Oklahoma</span>
+          </div>
+          <div class="market-info-item" style="margin-bottom: 1rem; border-left-color: var(--green);">
+            <strong>Store Hours</strong>
+            <span>Monday–Saturday: 10am – 6pm<br>Sunday: 12pm – 5pm<br><a href="https://www.google.com/maps/search/Memory+Lane+Vintage+Mall+Stillwater+OK" target="_blank" rel="noopener" style="color:var(--blue); font-size:0.9rem;">View current hours on Google</a></span>
+          </div>
+          <div class="market-info-item" style="margin-bottom: 1rem; border-left-color: var(--purple);">
+            <strong>Phone</strong>
+            <span><a href="tel:+14053387558" style="color:var(--blue);">(405) 338-7558</a></span>
+          </div>
+          <div class="market-info-item" style="border-left-color: var(--yellow);">
+            <strong>New Location Updates</strong>
+            <span>Use the form to get on our list. We'll share details as soon as we're ready to announce.</span>
+          </div>
+
+          <p style="color: var(--text-light); font-style: italic; font-size: 0.9rem; margin-top: 2rem;">
+            For vendor inquiries → <a href="vendors.html">Vendors page</a><br>
+            For market booth applications → <a href="market.html">Outdoor Market page</a>
+          </p>
+        </div>
+
+        <!-- General Contact Form -->
+        <div>
+          <h2>Send us a note.</h2>
+          <hr class="divider" />
+
+          <div class="form-success">
+            Your message came through — thank you! We'll be in touch soon.
+          </div>
+
+          <form name="general-contact" method="POST" netlify netlify-honeypot="bot-field" action="/contact.html?success=true">
+            <input type="hidden" name="form-name" value="general-contact" />
+            <p style="display:none;"><label>Don't fill this out: <input name="bot-field" /></label></p>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="c-first-name">First Name *</label>
+                <input type="text" id="c-first-name" name="first-name" required placeholder="Ruby" />
+              </div>
+              <div class="form-group">
+                <label for="c-last-name">Last Name *</label>
+                <input type="text" id="c-last-name" name="last-name" required placeholder="Collins" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="c-email">Email Address *</label>
+              <input type="email" id="c-email" name="email" required placeholder="ruby@example.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="c-phone">Phone Number</label>
+              <input type="tel" id="c-phone" name="phone" placeholder="(405) 555-0100" />
+            </div>
+
+            <div class="form-group">
+              <label for="c-subject">What's this about?</label>
+              <select id="c-subject" name="subject">
+                <option value="">— Select a topic —</option>
+                <option value="general">General question</option>
+                <option value="new-location">New location news</option>
+                <option value="lost-found">Lost & found</option>
+                <option value="press">Press or collaboration</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="c-message">Your Message *</label>
+              <textarea id="c-message" name="message" required placeholder="Say whatever's on your mind. We love hearing from people." style="min-height:130px;"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="checkbox-label" style="font-size:0.9rem;">
+                <input type="checkbox" name="new-location-updates" value="yes" style="width:18px;height:18px;accent-color:var(--red);flex-shrink:0;" />
+                &nbsp;Add me to the list for new location updates
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn--primary" style="width:100%; font-size:1rem; padding:1rem;">
+              Send Message
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Color stripe -->
+  <div class="diamond-row"><span></span><span></span><span></span><span></span></div>
+
+  <!-- Job Application -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 2.5rem;">
+        <h2>Work at Memory Lane.</h2>
+        <hr class="divider divider--center divider--green" />
+        <p class="lead">We hire people who genuinely love this stuff.</p>
+        <p style="max-width: 620px; margin: 0 auto; color: var(--text-light);">
+          Working at Memory Lane isn't like working retail. It's more like getting
+          paid to talk about things you already love with people who feel the same way.
+          If that sounds like a good day, we'd love to hear from you — whether or not
+          we're actively hiring right now.
+        </p>
+      </div>
+
+      <div class="form-success">
+        Application received! We keep all applications on file and will reach out when there's a match. Thank you for your interest.
+      </div>
+
+      <div class="form-wrap" style="border-top-color: var(--green);">
+        <h3 style="margin-bottom: 0.3rem;">Job Application</h3>
+        <p class="lead" style="font-size:0.95rem; margin-bottom:2rem;">Tell us about yourself and what draws you to Memory Lane.</p>
+
+        <form name="job-application" method="POST" netlify netlify-honeypot="bot-field" action="/contact.html?success=true">
+          <input type="hidden" name="form-name" value="job-application" />
+          <p style="display:none;"><label>Don't fill this out: <input name="bot-field" /></label></p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="j-first-name">First Name *</label>
+              <input type="text" id="j-first-name" name="first-name" required placeholder="Willa" />
+            </div>
+            <div class="form-group">
+              <label for="j-last-name">Last Name *</label>
+              <input type="text" id="j-last-name" name="last-name" required placeholder="Marsh" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="j-email">Email Address *</label>
+            <input type="email" id="j-email" name="email" required placeholder="willa@example.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="j-phone">Phone Number *</label>
+            <input type="tel" id="j-phone" name="phone" required placeholder="(405) 555-0100" />
+          </div>
+
+          <div class="form-group">
+            <label for="j-availability">Availability</label>
+            <select id="j-availability" name="availability">
+              <option value="">— Select one —</option>
+              <option value="full-time">Full-time</option>
+              <option value="part-time">Part-time</option>
+              <option value="weekends">Weekends / as needed</option>
+              <option value="flexible">Flexible — let's talk</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="j-experience">Tell us about your background *</label>
+            <textarea id="j-experience" name="experience" required placeholder="Retail experience, any background in antiques or vintage, customer service — whatever feels relevant. Don't overthink it." style="min-height:120px;"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="j-why">Why Memory Lane? *</label>
+            <textarea id="j-why" name="why-memory-lane" required placeholder="This is the one we actually read most carefully. Tell us what draws you here — what you love about vintage, about Stillwater, about this kind of work." style="min-height:130px;"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="j-other">Anything else?</label>
+            <textarea id="j-other" name="other" placeholder="Questions, special skills, something fun you think we should know about you." style="min-height:90px;"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary" style="background-color:var(--green); border-color:var(--green); width:100%; font-size:1rem; padding:1rem;">
+            Submit Application
+          </button>
+          <p class="form-note" style="text-align:center; margin-top:1rem;">
+            We keep applications on file. Even if we're not hiring right now, we love knowing who's out there.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Location Callout -->
+  <section class="section section--navy">
+    <div class="container text-center">
+      <h2>A new Memory Lane is coming.</h2>
+      <hr class="divider divider--center divider--yellow" />
+      <p style="color:#AAAACC; max-width:560px; margin:0 auto;">
+        We're not spilling all the details just yet, but a second Memory Lane
+        location is in the works — more space, more vendors, more of everything
+        you love about the shop. We'll share everything when the time is right.
+        Until then, drop your email in the contact form above and we'll make sure
+        you're the first to know.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__top-stripe"></div>
+    <div class="footer__grid">
+      <div class="footer__logo">
+        <img src="logo.jpg" alt="Memory Lane Vintage Mall" />
+        <p class="footer__tagline">"The things that last are always worth finding."<br>Come on in — the dogs are friendly.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="vendors.html">Become a Vendor</a></li>
+          <li><a href="market.html">Outdoor Market</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <address class="footer__address">
+          208 W 10th Ave<br>
+          Stillwater, Oklahoma<br>
+          <a href="tel:+14053387558" style="color:var(--yellow);">(405) 338-7558</a><br>
+          <br>
+          <strong style="color: var(--yellow);">Hours</strong><br>
+          Mon–Sat: 10am – 6pm<br>
+          Sunday: 12pm – 5pm
+        </address>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; 2024 Memory Lane Vintage Mall. All rights reserved.</span>
+      <span>Made with love in Stillwater, OK.</span>
+    </div>
+    <div class="footer__credit">Site by <a href="https://novabuildweb.com" target="_blank" rel="noopener">NovaBuild LLC</a></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
