@@ -84,7 +84,7 @@
             Your message came through — thank you! We'll be in touch soon.
           </div>
 
-          <form name="general-contact" method="POST" netlify netlify-honeypot="bot-field" action="/contact.html?success=true">
+          <form name="general-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact.html?success=true">
             <input type="hidden" name="form-name" value="general-contact" />
             <p style="display:none;"><label>Don't fill this out: <input name="bot-field" /></label></p>
 
@@ -169,7 +169,7 @@
         <h3 style="margin-bottom: 0.3rem;">Job Application</h3>
         <p class="lead" style="font-size:0.95rem; margin-bottom:2rem;">Tell us about yourself and what draws you to Memory Lane.</p>
 
-        <form name="job-application" method="POST" netlify netlify-honeypot="bot-field" action="/contact.html?success=true">
+        <form name="job-application" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact.html?success=true">
           <input type="hidden" name="form-name" value="job-application" />
           <p style="display:none;"><label>Don't fill this out: <input name="bot-field" /></label></p>
 
