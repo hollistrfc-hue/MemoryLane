@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vendors — Memory Lane Vintage Mall</title>
-  <meta name="description" content="Rent a booth at Memory Lane Vintage Mall in Stillwater, OK. Month-to-month, no commission. Apply to become a vendor today." />
+  <meta name="description" content="Rent a booth at Memory Lane Vintage Mall in Stillwater, OK. Month-to-month agreements. Apply to become a vendor today." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- Announcement Banner -->
   <div class="banner">
-    ✦ New Things Coming Soon — <a href="contact.html">Stay in the loop</a> ✦
+    <a href="contact.html">Stay in the Loop</a>
   </div>
 
   <!-- Navigation -->
@@ -52,7 +52,7 @@
             Memory Lane operates as a juried rent-a-booth mall — which means we're selective about who joins, and intentional about the mix. We're not just filling square footage. We're curating an experience, and that means the vendors we bring in are people who care about what they sell and take pride in how they show it.
           </p>
           <p>
-            The model is simple and vendor-friendly: you pay a flat monthly booth fee, keep everything you make on sales (no commission), and we handle the rest — foot traffic, the storefront, checkout, and the day-to-day of keeping the lights on. Agreements are month-to-month, so there's no long-term commitment hanging over your head.
+            The model is simple and vendor-friendly: vendors pay rent plus a 10% commission on sales, and we handle the rest — foot traffic, the storefront, checkout, and the day-to-day of keeping the lights on. Agreements are month-to-month, so there's no long-term commitment hanging over your head.
           </p>
           <p>
             We have booth sizes to fit most situations, from small display cases for jewelry and smalls to larger spaces suited for furniture and big pieces. Pricing is straightforward and we'll talk through the details when we connect. What we're really looking for is vendors who are going to keep their space fresh, rotate inventory, and contribute to the overall feeling that Memory Lane is a shop worth coming back to.
@@ -114,9 +114,7 @@
       </div>
 
       <div class="form-wrap">
-        <form name="vendor-application" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/vendors.html?success=true">
-          <input type="hidden" name="form-name" value="vendor-application" />
-          <p style="display:none;"><label>Don't fill this out: <input name="bot-field" /></label></p>
+        <form action="https://formspree.io/f/mkokrpbv" method="POST" enctype="multipart/form-data">
 
           <div class="form-group">
             <label for="v-name">Your Name *</label>
@@ -150,11 +148,10 @@
           </div>
 
           <div class="form-group">
-            <label for="v-photos">Upload 2–3 photos of your past booth or inventory</label>
+            <label for="v-photos">Upload photos of your booth or inventory (optional)</label>
             <input type="file" id="v-photos" name="photos" accept=".jpg,.jpeg,.png" multiple />
             <p class="form-note" style="margin-top:0.5rem; font-size:0.85rem; color:var(--text-light);">
-              Accepted formats: JPG, PNG. Up to 3 photos.<br>
-              Can't upload right now? Email your photos to <a href="mailto:memorylanevintagemall@gmail.com" style="color:var(--blue);">memorylanevintagemall@gmail.com</a>
+              Can't upload right now? Email photos to <a href="mailto:memorylanevintagemall@gmail.com" style="color:var(--blue);">memorylanevintagemall@gmail.com</a>
             </p>
           </div>
 
@@ -200,8 +197,9 @@
           <a href="tel:+14053387558" style="color:var(--yellow);">(405) 338-7558</a><br>
           <br>
           <strong style="color: var(--yellow);">Hours</strong><br>
-          Mon–Sat: 10am – 6pm<br>
-          Sunday: 12pm – 5pm
+          Mon–Fri: 12:00 PM – 8:00 PM<br>
+          Saturday: 11:00 AM – 8:00 PM<br>
+          Sunday: 1:00 PM – 5:00 PM
         </address>
       </div>
     </div>
