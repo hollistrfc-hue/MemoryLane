@@ -303,8 +303,8 @@ p:last-child { margin-bottom: 0; }
   color: var(--white);
   padding: 6rem 1.5rem;
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
   align-items: center;
 }
 
@@ -485,26 +485,13 @@ p:last-child { margin-bottom: 0; }
   object-fit: contain;
 }
 
-.hero__image img:first-child {
+.hero__image img {
   width: 100%;
-  height: auto;
+  height: 420px;
+  object-fit: cover;
+  object-position: center;
   border-radius: 6px;
   display: block;
-}
-
-.hero__logo-gap {
-  margin-top: 28px;
-  margin-bottom: 0;
-  text-align: center;
-}
-
-.hero__logo-center {
-  width: 240px;
-  max-width: 100%;
-  height: auto;
-  display: inline-block;
-  border-radius: 12px;
-  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.45);
 }
 
 /* Dogs single photo */
@@ -937,7 +924,6 @@ p:last-child { margin-bottom: 0; }
     gap: 2.5rem;
     text-align: center;
   }
-  .hero__logo-center { width: 150px; }
   .hero__badge { right: 0; bottom: -12px; }
   .two-col { grid-template-columns: 1fr; gap: 2.5rem; }
   .two-col--reverse { direction: ltr; }
