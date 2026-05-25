@@ -209,17 +209,101 @@
     </div>
   </div>
 
-  <!-- Booth Application -->
+  <!-- Booth Application Form -->
   <section class="section section--alt">
     <div class="container">
       <div class="text-center" style="margin-bottom: 2.5rem;">
         <h2>Apply for a Market Booth</h2>
         <hr class="divider divider--center" />
+        <p class="lead">We review applications and reach out with availability and pricing.</p>
       </div>
-      <div class="form-wrap" style="text-align:center; padding: 2rem;">
-        <p style="font-size: 1.1rem; color: var(--text-light); max-width: 520px; margin: 0 auto;">
-          When booth spaces become available, we'll list them here along with the application. Check back for openings!
-        </p>
+
+      <div class="form-success">
+        Your application is in! We'll review it and reach out soon with details about booth availability and next steps.
+      </div>
+
+      <div class="form-wrap">
+        <form name="market-application" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/market.html?success=true">
+          <input type="hidden" name="form-name" value="market-application" />
+          <p style="display:none;"><label>Don't fill this out: <input name="bot-field" /></label></p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="m-first-name">First Name *</label>
+              <input type="text" id="m-first-name" name="first-name" required placeholder="Loretta" />
+            </div>
+            <div class="form-group">
+              <label for="m-last-name">Last Name *</label>
+              <input type="text" id="m-last-name" name="last-name" required placeholder="Birch" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="m-email">Email Address *</label>
+            <input type="email" id="m-email" name="email" required placeholder="loretta@example.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="m-phone">Phone Number *</label>
+            <input type="tel" id="m-phone" name="phone" required placeholder="(405) 555-0100" />
+          </div>
+
+          <div class="form-group">
+            <label for="m-business">Business or Vendor Name</label>
+            <input type="text" id="m-business" name="business-name" placeholder="Birch & Bloom Vintage" />
+          </div>
+
+          <div class="form-group">
+            <label for="m-city">City / Town</label>
+            <input type="text" id="m-city" name="city" placeholder="Stillwater, OK" />
+          </div>
+
+          <div class="form-group">
+            <label for="m-what-you-sell">What do you sell? *</label>
+            <textarea id="m-what-you-sell" name="what-you-sell" required placeholder="Describe what you'd bring to the market — antiques, handmade goods, vintage clothing, etc."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Booth Size Interest *</label>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" name="booth-size" value="10x10" />
+                10x10 booth space — $50
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="booth-size" value="single-table" />
+                Single table or comparable display — $30
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="m-market-experience">Have you done outdoor markets before?</label>
+            <select id="m-market-experience" name="market-experience">
+              <option value="">— Select one —</option>
+              <option value="yes-many">Yes — this is my regular thing</option>
+              <option value="yes-some">Yes — a few times</option>
+              <option value="no">No — this would be my first</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="m-dates">Are there specific upcoming dates you're interested in?</label>
+            <input type="text" id="m-dates" name="preferred-dates" placeholder="e.g. Next available, June market, etc." />
+          </div>
+
+          <div class="form-group">
+            <label for="m-message">Anything else you'd like us to know?</label>
+            <textarea id="m-message" name="message" style="min-height:90px;" placeholder="Questions, special setup needs, social media handles — tell us whatever feels relevant."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary" style="width:100%; font-size:1rem; padding:1rem;">
+            Submit My Application
+          </button>
+          <p class="form-note" style="text-align:center; margin-top:1rem;">
+            Applications are reviewed on a rolling basis. We'll reach out within a week.
+          </p>
+        </form>
       </div>
     </div>
   </section>
