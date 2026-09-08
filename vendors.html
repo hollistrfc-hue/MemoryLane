@@ -116,16 +116,127 @@
   </section>
 
   <!-- SECTION 3: Vendor Application -->
-  <section class="section">
+  <section id="vendor-application" class="section">
     <div class="container">
       <div class="text-center" style="margin-bottom: 2.5rem;">
-        <h2>Vendor Application</h2>
-        <hr class="divider divider--center" />
+        <h2>Booth Openings — Apply Now</h2>
+        <hr class="divider divider--center divider--green" />
       </div>
-      <div class="form-wrap" style="text-align:center; padding: 2rem;">
-        <p style="font-size: 1.1rem; color: var(--text-light); max-width: 520px; margin: 0 auto;">
-          When booth spaces become available, we'll list them here along with the application. Check back for openings!
+
+      <div style="max-width: 750px; margin: 0 auto 3.5rem;">
+
+        <p style="font-size: 1.2rem; font-weight: 700; color: var(--navy); margin-bottom: 1.75rem;">
+          We have <strong>TWO spaces coming available in October!</strong>
         </p>
+
+        <!-- Space 1 -->
+        <div style="border-left: 4px solid var(--green); padding: 1.25rem 1.5rem; background: #f4fde8; margin-bottom: 1.25rem; border-radius: 0 6px 6px 0;">
+          <h3 style="margin-bottom: 0.35rem; color: var(--green-dark);">Starter Space — $75/month</h3>
+          <p style="margin-bottom: 0;">About the size of two standard bookcases or a large hutch/china cabinet. A great way for a first-time vendor to start small, learn the ropes, and see if being a vendor is right for you.</p>
+        </div>
+
+        <!-- Space 2 -->
+        <div style="border-left: 4px solid var(--blue); padding: 1.25rem 1.5rem; background: #e8f6fc; margin-bottom: 2rem; border-radius: 0 6px 6px 0;">
+          <h3 style="margin-bottom: 0.35rem; color: var(--blue-dark);">7.5&prime; &times; 9&prime; Space — $204/month</h3>
+          <p style="margin-bottom: 0; color: var(--text-light); font-size: 0.95rem;">68 sq. ft. at $3.00/sq. ft. &middot; No electrical outlet.</p>
+        </div>
+
+        <!-- Vendor Fees -->
+        <div style="background: var(--off-white); padding: 1.25rem 1.5rem; border-radius: 6px; margin-bottom: 2rem; border: 1px solid var(--border);">
+          <h3 style="margin-bottom: 0.75rem; font-size: 1.1rem;">Vendor Fees</h3>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="padding: 0.4rem 0; border-bottom: 1px solid var(--border);">10% commission on sales</li>
+            <li style="padding: 0.4rem 0;">3% fee on credit/debit card transactions on your merchandise</li>
+          </ul>
+        </div>
+
+        <!-- Important Notice -->
+        <div style="background: #fff8e7; border-left: 4px solid var(--yellow-dark); padding: 1.5rem; margin-bottom: 2rem; border-radius: 0 6px 6px 0;">
+          <h3 style="margin-bottom: 0.75rem; color: var(--navy);">Important, Please Read Before Applying</h3>
+          <p style="margin-bottom: 1rem; font-style: italic; color: var(--text-light);">"Memory Lane is not a 'set it and forget it' mall. We are looking for vendors who are motivated, passionate about vintage, and willing to put in the time to keep their space stocked, styled and looking its best."</p>
+          <p style="margin-bottom: 0.5rem; font-weight: 700;">Vendor requirements:</p>
+          <ul style="padding-left: 1.5rem; margin-bottom: 0; color: var(--text);">
+            <li style="margin-bottom: 0.4rem;">80% vintage items — 25 years or older</li>
+            <li style="margin-bottom: 0.4rem;">Up to 20% newer items that are collectible, handmade, or otherwise fit beautifully into our vintage atmosphere</li>
+            <li style="margin-bottom: 0.4rem;">Maintaining a clean, organized and cohesive booth</li>
+            <li>Regular attention and maintenance of your space</li>
+          </ul>
+        </div>
+
+        <!-- How to Apply -->
+        <div>
+          <h3 style="margin-bottom: 0.75rem;">How to Apply</h3>
+          <p>Applications are open <strong>Tuesday, September 8 through Wednesday, September 23.</strong> Fill out the form below to get started.</p>
+        </div>
+
+      </div>
+
+      <!-- Success Message -->
+      <div class="form-success">
+        Thank you — we've received your application and we'll be in touch soon. We can't wait to learn more about what you sell.
+      </div>
+
+      <!-- Application Form -->
+      <div class="form-wrap">
+        <form method="POST" action="vendors.html?success=true" data-netlify="true" name="vendor-application">
+          <input type="hidden" name="form-name" value="vendor-application">
+
+          <div class="form-group">
+            <label for="v-name">Your Name *</label>
+            <input type="text" id="v-name" name="name" required placeholder="Full name" />
+          </div>
+
+          <div class="form-group">
+            <label for="v-email">Email Address *</label>
+            <input type="email" id="v-email" name="email" required placeholder="you@example.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="v-phone">Phone Number *</label>
+            <input type="tel" id="v-phone" name="phone" required placeholder="(405) 555-0100" />
+          </div>
+
+          <div class="form-group">
+            <label for="v-what-you-sell">What type of items do you sell? *</label>
+            <textarea id="v-what-you-sell" name="what-you-sell" required placeholder="Antique furniture, vintage kitchenware, handmade jewelry — tell us what you've got…"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="v-booth-interest">Which space are you interested in?</label>
+            <select id="v-booth-interest" name="booth-interest">
+              <option value="">— Select one —</option>
+              <option value="starter">Starter Space — $75/month</option>
+              <option value="medium">7.5&prime; &times; 9&prime; Space — $204/month</option>
+              <option value="either">Either / Open to both</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="v-experience">Prior vending experience</label>
+            <textarea id="v-experience" name="experience" placeholder="Tell us about any booth, market, or online selling experience — or let us know if you're new to vending…" style="min-height:100px;"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="v-message">Anything else you'd like us to know?</label>
+            <textarea id="v-message" name="message" placeholder="Questions, your setup style, anything that feels relevant…" style="min-height:100px;"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary" style="width:100%; font-size:1rem; padding:1rem;">
+            Submit Application
+          </button>
+          <p class="form-note" style="text-align:center; margin-top:1rem;">
+            We typically respond within 2–3 business days. Every application is read by Jeremy or Beth personally.
+          </p>
+
+          <div style="margin-top: 1.5rem; background: #cc0000; color: #fff; padding: 1.4rem 1.5rem; border-radius: 6px; text-align: center;">
+            <p style="margin: 0; font-weight: 900; font-size: 0.97rem; line-height: 1.65; color: #fff;">
+              IMPORTANT: To be considered, you MUST complete this application AND email at least 3 photos to
+              <a href="mailto:memorylane626@gmail.com" style="color: var(--yellow);">memorylane626@gmail.com</a>.<br>
+              Photos may be of another booth you currently have, market spaces you've previously had, or — if you're new to vending — examples of the merchandise you plan to sell.<br>
+              <span style="font-size: 1.05rem; display: inline-block; margin-top: 0.5rem;">NO PHOTOS = YOU WILL NOT BE CONSIDERED.</span>
+            </p>
+          </div>
+        </form>
       </div>
     </div>
   </section>
