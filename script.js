@@ -34,17 +34,42 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // ----- Netlify Form Success Handling -----
-  // Show a friendly message if redirected back after submission
-  const params = new URLSearchParams(window.location.search);
-  if (params.get('success') === 'true') {
-    const successMsgs = document.querySelectorAll('.form-success');
-    successMsgs.forEach(function (el) {
-      el.style.display = 'block';
+  // ----- Vendor Application Form — Modal Submission -----
+  const vendorForm = document.getElementById('vendor-form');
+  const vendorModal = document.getElementById('vendor-modal');
+  const modalClose = document.getElementById('modal-close');
+
+  if (vendorForm && vendorModal) {
+    vendorForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const formData = new FormData(vendorForm);
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+      })
+      .then(function () {
+        vendorModal.hidden = false;
+        vendorModal.focus();
+      })
+      .catch(function () {
+        vendorModal.hidden = false;
+      });
     });
-    const forms = document.querySelectorAll('form[netlify]');
-    forms.forEach(function (form) {
-      form.style.display = 'none';
+
+    function closeModal() {
+      vendorModal.hidden = true;
+      vendorForm.reset();
+    }
+
+    if (modalClose) modalClose.addEventListener('click', closeModal);
+
+    vendorModal.addEventListener('click', function (e) {
+      if (e.target === vendorModal) closeModal();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !vendorModal.hidden) closeModal();
     });
   }
 

@@ -178,7 +178,7 @@
 
       <!-- Application Form -->
       <div class="form-wrap">
-        <form method="POST" action="vendors.html?success=true" data-netlify="true" name="vendor-application">
+        <form method="POST" data-netlify="true" name="vendor-application" id="vendor-form">
           <input type="hidden" name="form-name" value="vendor-application">
 
           <div class="form-group">
@@ -293,6 +293,17 @@
     </div>
     <div class="footer__credit">Site by <a href="https://novabuildweb.com" target="_blank" rel="noopener">NovaBuild LLC</a></div>
   </footer>
+
+  <!-- Application Submitted Modal -->
+  <div id="vendor-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal">
+      <h2 id="modal-title">Application Received!</h2>
+      <hr class="divider divider--center divider--green" style="margin-bottom:1.25rem;" />
+      <p>Thank you for applying — we've received your application and we'll be in touch soon. Every application is read by Jeremy or Beth personally.</p>
+      <p style="margin-bottom:1.5rem;">Don't forget to email your photos to <a href="mailto:memorylane626@gmail.com" style="color:var(--blue);">memorylane626@gmail.com</a> to complete your application!</p>
+      <button class="btn btn--primary" id="modal-close" style="width:100%;">Close</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
