@@ -115,7 +115,27 @@
     </div>
   </section>
 
-  <!-- SECTION 3: Vendor Application -->
+  <!-- No Current Openings Notice -->
+  <section class="section">
+    <div class="container">
+      <div style="max-width: 680px; margin: 0 auto; text-align: center;">
+        <h2>No Booth Openings at This Time</h2>
+        <hr class="divider divider--center divider--blue" />
+        <p style="font-size: 1.05rem; color: var(--text-light); margin-bottom: 1.5rem;">
+          We're not currently accepting vendor applications, but we'd love to keep you in mind for when something opens up. The best thing you can do is reach out and introduce yourself — that way you're on our radar when a space becomes available.
+        </p>
+        <p style="font-size: 1rem; color: var(--text);">
+          <strong>Call us:</strong> <a href="tel:+14053387558" style="color: var(--blue);">(405) 338-7558</a>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <strong>Email:</strong> <a href="mailto:memorylane626@gmail.com" style="color: var(--blue);">memorylane626@gmail.com</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       BOOTH OPENINGS — HIDDEN (uncomment to restore when openings return)
+  ════════════════════════════════════════════════════════════════════════
   <section id="vendor-application" class="section">
     <div class="container">
       <div class="text-center" style="margin-bottom: 2.5rem;">
@@ -129,25 +149,21 @@
           We have <strong>THREE spaces coming available in October!</strong>
         </p>
 
-        <!-- Space 1 -->
         <div style="border-left: 4px solid var(--green); padding: 1.25rem 1.5rem; background: #f4fde8; margin-bottom: 1.25rem; border-radius: 0 6px 6px 0;">
           <h3 style="margin-bottom: 0.35rem; color: var(--green-dark);">Starter Space — $75/month</h3>
           <p style="margin-bottom: 0;">About the size of two standard bookcases or a large hutch/china cabinet. A great way for a first-time vendor to start small, learn the ropes, and see if being a vendor is right for you.</p>
         </div>
 
-        <!-- Space 2 -->
         <div style="border-left: 4px solid var(--blue); padding: 1.25rem 1.5rem; background: #e8f6fc; margin-bottom: 1.25rem; border-radius: 0 6px 6px 0;">
           <h3 style="margin-bottom: 0.35rem; color: var(--blue-dark);">7.5&prime; &times; 9&prime; Space — $204/month</h3>
           <p style="margin-bottom: 0; color: var(--text-light); font-size: 0.95rem;">68 sq. ft. at $3.00/sq. ft. &middot; No electrical outlet.</p>
         </div>
 
-        <!-- Space 3 -->
         <div style="border-left: 4px solid var(--purple); padding: 1.25rem 1.5rem; background: #f3eeff; margin-bottom: 2rem; border-radius: 0 6px 6px 0;">
           <h3 style="margin-bottom: 0.35rem; color: var(--purple);">8&prime; &times; 6&prime; Space — $144/month</h3>
           <p style="margin-bottom: 0; color: var(--text-light); font-size: 0.95rem;">48 sq. ft. at $3.00/sq. ft. &middot; No electrical outlet.</p>
         </div>
 
-        <!-- Vendor Fees -->
         <div style="background: var(--off-white); padding: 1.25rem 1.5rem; border-radius: 6px; margin-bottom: 2rem; border: 1px solid var(--border);">
           <h3 style="margin-bottom: 0.75rem; font-size: 1.1rem;">Vendor Fees</h3>
           <ul style="list-style: none; padding: 0; margin: 0;">
@@ -156,7 +172,6 @@
           </ul>
         </div>
 
-        <!-- Important Notice -->
         <div style="background: #fff8e7; border-left: 4px solid var(--yellow-dark); padding: 1.5rem; margin-bottom: 2rem; border-radius: 0 6px 6px 0;">
           <h3 style="margin-bottom: 0.75rem; color: var(--navy);">Important, Please Read Before Applying</h3>
           <p style="margin-bottom: 1rem; font-style: italic; color: var(--text-light);">"Memory Lane is not a 'set it and forget it' mall. We are looking for vendors who are motivated, passionate about vintage, and willing to put in the time to keep their space stocked, styled and looking its best."</p>
@@ -169,7 +184,6 @@
           </ul>
         </div>
 
-        <!-- How to Apply -->
         <div>
           <h3 style="margin-bottom: 0.75rem;">How to Apply</h3>
           <p>Applications are open <strong>Tuesday, September 8 through Wednesday, September 23.</strong> Fill out the form below to get started.</p>
@@ -177,12 +191,10 @@
 
       </div>
 
-      <!-- Success Message -->
       <div class="form-success">
         Thank you — we've received your application and we'll be in touch soon. We can't wait to learn more about what you sell.
       </div>
 
-      <!-- Application Form -->
       <div class="form-wrap">
         <form method="POST" data-netlify="true" name="vendor-application" id="vendor-form">
           <input type="hidden" name="form-name" value="vendor-application">
@@ -247,6 +259,7 @@
       </div>
     </div>
   </section>
+  END BOOTH OPENINGS — ═══════════════════════════════════════════════ -->
 
   <!-- SECTION: Looking to Sell Items to Us? -->
   <section class="section section--alt">
@@ -301,7 +314,9 @@
     <div class="footer__credit">Site by <a href="https://novabuildweb.com" target="_blank" rel="noopener">NovaBuild LLC</a></div>
   </footer>
 
-  <!-- Application Submitted Modal -->
+  <!-- ═══════════════════════════════════════════════════════════════════
+       APPLICATION MODAL — HIDDEN (restore with booth openings section)
+  ════════════════════════════════════════════════════════════════════════
   <div id="vendor-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
     <div class="modal">
       <h2 id="modal-title">Application Received!</h2>
@@ -311,6 +326,7 @@
       <button class="btn btn--primary" id="modal-close" style="width:100%;">Close</button>
     </div>
   </div>
+  END APPLICATION MODAL — ════════════════════════════════════════════ -->
 
   <script src="script.js"></script>
 </body>
