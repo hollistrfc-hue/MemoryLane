@@ -34,6 +34,17 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  // ----- Vote Click Tracking -----
+  document.querySelectorAll('.vote-banner__btn, .vote-badge').forEach(function (el) {
+    el.addEventListener('click', function () {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'vote_click', {
+          source: el.classList.contains('vote-badge') ? 'badge' : 'banner'
+        });
+      }
+    });
+  });
+
   // ----- Vendor Application Form — Modal Submission -----
   const vendorForm = document.getElementById('vendor-form');
   const vendorModal = document.getElementById('vendor-modal');

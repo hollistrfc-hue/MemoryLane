@@ -231,13 +231,12 @@ p:last-child { margin-bottom: 0; }
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.25rem;
+  gap: 1rem;
   background: linear-gradient(135deg, #5a9e2f 0%, #8CC63F 50%, #5a9e2f 100%);
-  padding: 0.9rem 2.5rem;
+  padding: 0.6rem 2.5rem;
   text-decoration: none;
   color: var(--white);
   transition: filter 0.2s ease;
-  border-bottom: 3px solid #4a8020;
 }
 .booth-banner:hover {
   filter: brightness(1.08);
@@ -245,13 +244,13 @@ p:last-child { margin-bottom: 0; }
 }
 .booth-banner__text {
   font-family: 'Playfair Display', serif;
-  font-size: 1.05rem;
+  font-size: 0.98rem;
   font-weight: 700;
   color: var(--white);
 }
 .booth-banner__cta {
   font-family: 'Lato', sans-serif;
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 900;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -261,11 +260,11 @@ p:last-child { margin-bottom: 0; }
 @media (max-width: 680px) {
   .booth-banner {
     flex-direction: column;
-    gap: 0.4rem;
-    padding: 0.9rem 1rem;
+    gap: 0.3rem;
+    padding: 0.6rem 1rem;
     text-align: center;
   }
-  .booth-banner__text { font-size: 0.95rem; }
+  .booth-banner__text { font-size: 0.9rem; }
 }
 
 /* ---------- Award Page Styles ---------- */
@@ -1340,6 +1339,138 @@ p:last-child { margin-bottom: 0; }
   .footer__address {
     word-break: break-word;
   }
+}
+
+/* ---------- Vote for Us Banner ---------- */
+.vote-banner {
+  background: linear-gradient(135deg, #1A7E9A 0%, #29A9CF 50%, #1A7E9A 100%);
+  padding: 0.65rem 1.5rem;
+  border-bottom: 3px solid #1A7E9A;
+  animation: voteBannerIn 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) both;
+}
+
+@keyframes voteBannerIn {
+  from { opacity: 0; transform: translateY(-12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.vote-banner__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.vote-banner__headline {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.vote-banner__sub {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.82);
+  letter-spacing: 0.04em;
+}
+
+.vote-banner__btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--yellow);
+  color: var(--navy);
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0 1.25rem;
+  min-height: 44px;
+  border-radius: 4px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.vote-banner__btn:hover {
+  background-color: var(--yellow-dark);
+  color: var(--navy);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 680px) {
+  .vote-banner { padding: 0.65rem 1rem; }
+  .vote-banner__inner { flex-direction: column; gap: 0.35rem; }
+  .vote-banner__headline { font-size: 0.9rem; }
+}
+
+/* ---------- Floating Vote Badge ---------- */
+.vote-badge {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+  background: var(--navy);
+  color: var(--yellow);
+  border: 2px solid var(--yellow);
+  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: voteBadgeIn 0.9s cubic-bezier(0.25, 0.1, 0.25, 1) 0.3s both;
+}
+
+@keyframes voteBadgeIn {
+  from { opacity: 0; transform: scale(0.7); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.vote-badge:hover {
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.45);
+  color: var(--yellow-light);
+}
+
+.vote-badge__icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.vote-badge__text {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.5rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  text-align: center;
+  line-height: 1.3;
+}
+
+@media (max-width: 480px) {
+  .vote-badge {
+    width: 60px;
+    height: 60px;
+    bottom: 1rem;
+    right: 1rem;
+  }
+  .vote-badge__icon { font-size: 1.2rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vote-banner,
+  .vote-badge { animation: none; }
 }
 
 /* ---------- Market Schedule Card ---------- */
